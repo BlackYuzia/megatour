@@ -1,0 +1,27 @@
+{
+    "name": "megatour",
+    "description": "Demo Tour Program",
+    "main": "app.js",
+    "directory": "vendor",
+    "authors": [
+        "Black_Yuzia <osmolyar@ukr.net>"
+    ],
+    "license": "MIT",
+    "keywords": [
+        "Demo"
+    ],
+    "homepage": "http://github.com/black_yuzia/megatour",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "jquery": "latest",
+        "angular": "latest",
+        "angular-route": "latest",
+        "bootstrap": "3.3.7"
+    }
+}

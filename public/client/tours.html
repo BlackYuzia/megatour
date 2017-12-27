@@ -1,0 +1,20 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Country</th>
+            <th>Price for Adult</th>
+            <th>Price for Kid</th>
+            <th>Is Avia?</th>
+            <th>Is Hot?</th>
+        </tr>
+    </thead>
+    <tbody ng-repeat="t in model.tours">
+        <tr>
+            <td>{{t.country}}</td>
+            <td>{{t.priceAdult}}</td>
+            <td>{{t.priceKid}}</td>
+            <td>{{t.isAvia}}</td>
+            <td>{{t.isHot}}</td>
+        </tr>
+    </tbody>
+</table>
