@@ -57,5 +57,4 @@ typings/
 # dotenv environment variables file
 .env
 
-#Bower components #2
 public/vendor

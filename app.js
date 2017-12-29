@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-mongoose.connect("mongodb://127.0.0.1:27017/megatour", {
+mongoose.connect("mongodb://dima:12345@ds135817.mlab.com:35817/heroku_nm9zqhkb", {
     useMongoClient: true
 });
 mongoose.Promise = global.Promise;

@@ -1,86 +1,65 @@
 const express = require('express');
 const router = express.Router();
-const path = require('path');
+const path = require('path')
 const Tour = require('../models/tour');
 const toursController = require('../controllers/toursController');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    //res.render('index', { layout: null });
-    res.sendFile(path.join(__dirname, '../public/client', 'index2.html'));
+    // res.render('index', { layout: null });
+    // res.sendFile(path.join(__dirname, '../views', 'index.html'));
+    res.sendFile(path.join(__dirname, '../public/client', 'index.html'));
 });
 
 router.get("/setup-db", function(req, res) {
     var tours = [{
-            country: "India",
-            days: 10,
-            priceAdult: 1000,
-            priceKid: 800,
+            country: "Egypt",
+            days: 6,
+            priceAdult: 12000,
+            priceKid: 10000,
             isAvia: true,
             isHot: true
         },
         {
-            country: "Grees",
-            days: 10,
-            priceAdult: 1000,
-            priceKid: 800,
-            isAvia: true,
-            isHot: true
-        },
-        {
-            country: "Italia",
-            days: 10,
-            priceAdult: 1000,
-            priceKid: 800,
+            country: "Krum",
+            days: 6,
+            priceAdult: 14000,
+            priceKid: 12000,
             isAvia: true,
             isHot: false
         },
         {
-            country: "France",
-            days: 10,
+            country: "Ukraine",
+            days: 6,
             priceAdult: 1000,
-            priceKid: 800,
+            priceKid: 900,
+            isAvia: true,
+            isHot: true
+        },
+        {
+            country: "Bulgaria",
+            days: 6,
+            priceAdult: 20000,
+            priceKid: 18000,
             isAvia: true,
             isHot: false
-        },
-        {
-            country: "Germany",
-            days: 10,
-            priceAdult: 1000,
-            priceKid: 800,
-            isAvia: true,
-            isHot: true
-        },
-        {
-            country: "USA",
-            days: 10,
-            priceAdult: 1000,
-            priceKid: 800,
-            isAvia: true,
-            isHot: true
-        },
+        }
     ];
 
     Tour.remove({}, function(err) {
         if (err) {
             console.log(err);
-            res.status(500).json({
-                message: err
-            });
         } else
             Tour.insertMany(tours, function(err, docs) {
                 if (err) {
                     console.log(err);
-                    res.status(500).json({
-                        message: err
-                    });
-                } else {
+                } else
                     console.log("Tours created successully!")
-                    res.status(200).json({
-                        message: "Okay"
-                    });
-                }
             });
+    });
+
+    res.status(200).json({
+        message: "Okey",
     });
 
 });
