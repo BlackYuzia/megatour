@@ -1,17 +1,20 @@
-<h1>Veniam ullamco mollit aliquip laboris commodo consectetur non culpa deserunt irure non deserunt sunt occaecat. Non exercitation Lorem deserunt anim dolore Lorem nisi magna. Est et reprehenderit dolore aliqua ut elit culpa velit duis ea occaecat ullamco
-    ex.
-</h1>
-
+<h1>Hot Tours</h1>
 <div class="row">
     <div class="col-sm-6 col-md-4" ng-repeat="t in model.tours">
         <div class="thumbnail">
             <img src='https://dummyimage.com/242x200?text={{t.country}}' alt='' />
             <div class="caption">
-                <h3>{{t.country}}</h3>
-                <p>{{t.priceAdult}} {{t.priceKid}} {{t.isAvia}}</p>
+                <h3></h3>
                 <p>
-                    <a href="#" class="btn btn-primary" role="button">Button</a>
+                    <h3>Country: {{t.country}}</h3>
                 </p>
+                <p>Price for Adult: {{t.priceAdult}}
+                    <p>
+                        <p>Price for Kid: {{t.priceKid}}</p>
+                        <p>Is Avia: {{t.isAvia}}</p>
+                        <p>
+                            <a href="#" class="btn btn-primary" role="button">Button</a>
+                        </p>
             </div>
         </div>
     </div>
