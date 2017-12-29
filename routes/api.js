@@ -3,6 +3,9 @@ const router = express.Router();
 const toursController = require('../controllers/toursController');
 
 // tours Routes
+router.route('/register')
+    .post(toursController.register);
+
 router.route('/tours')
     .get(toursController.all)
     .post(toursController.createTour);

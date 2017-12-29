@@ -12,6 +12,10 @@ module.exports = {
             .then(tours => res.status(200).json(tours))
             .catch(err => res.status(500).json(err));
     },
+    register: function(req, res) {
+        console.log(req.body);
+        return res.status(200).json({ message: "Ok" });
+    },
     createTour: function(req, res) {
         var new_Tour = new Tour(req.body);
         new_Tour.saveAsync()

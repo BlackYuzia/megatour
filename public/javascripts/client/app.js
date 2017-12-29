@@ -3,7 +3,7 @@ app.config(function($routeProvider) {
     $routeProvider
         .when("/", {
             templateUrl: "client/main.html",
-            controller: "mainController"
+            controller: "toursController"
         })
         .when("/about", {
             templateUrl: "client/about.html",
@@ -12,9 +12,5 @@ app.config(function($routeProvider) {
         .when("/tours", {
             templateUrl: "client/tours.html",
             controller: "toursController"
-        })
-        // .when("/blue", {
-        //     templateUrl: "client/blue.html",
-        //     controller: "mainController"
-        // });
+        });
 });

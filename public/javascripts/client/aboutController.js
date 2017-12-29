@@ -3,6 +3,7 @@ app.controller('aboutController', [
     function($scope, $http) {
         $scope.model = {};
         $scope.getTours = getTours;
+        $scope.init = getTours;
 
         function getTours() {
             $http.get("/api/tours-hot")
@@ -12,6 +13,5 @@ app.controller('aboutController', [
                     $scope.model.tours = "Error: " + response.data.message;
                 });
         }
-        getTours();
     }
 ]);
