@@ -5,6 +5,7 @@
     "scripts": {
         "start": "node ./bin/www",
         "dev-debug": "SET DEBUG=megatour:* & npm start",
+        "postinstall": "bower cache clean && bower install",
         "dev": "nodemon ./bin/www"
     },
     "dependencies": {
